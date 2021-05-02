@@ -1,11 +1,11 @@
-#一.分析
+# 一.分析
 http://match.yuanrenxue.com/api/match/1?page=3&m=49a4efd1e78aa13e472c3abb429363e0%E4%B8%A81620029973
 
 
 m: 49a4efd1e78aa13e472c3abb429363e0丨1620029973
 后面跟的这个参数可以获取到响应，那么找到这个参数的生成位置，即可破除加密
 
-#二.寻找参数时生成位置
+# 二.寻找参数时生成位置
 ![img.png](img.png)
 
 点击那个request
@@ -34,7 +34,7 @@ J('0x0', ']dQW')，J('0x1', 'GTu!') 这两个是什么，但是一运行看到�
 找到了这两个函数，发现藏在oo0O0内，把他们复制出来到console里进行执行，如下图 那么![img_2.png](img_2.png)，
 atob(window['b'])["replace"]("mwqqppz", '\x27' + mw + '\x27')，那么显而易见把这个mwqqppz,参数替换为'\x27' + mw + '\x27'，而mw可以通过上方的调用代码为
 timestamp.toString()，
-#三.扣代码
+# 三.扣代码
 扣的代码在encryption里面，很简单自己看吧。
 
 
